@@ -1,6 +1,6 @@
 import React from "react";
 import './Headers.css'
-import logo from '../images/steamlogo.jpg'
+import logo from '../images/steamlogo.png'
 import { FaShoppingCart, FaSearch } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const Header = () => {
         </div>
         <ul className="container-registro">
           
-            <FaShoppingCart fontSize={30} />
+            <FaShoppingCart fontSize={30} color={'#fff'} />
           
         </ul>
       </div>
