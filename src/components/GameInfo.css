@@ -5,11 +5,15 @@
   display: flex;
 }
 .bg-image {
+  background-position: center top;
   background-color: gainsboro;
   background-size: contain;
   width: 70%;
   max-height: 300px;
   min-height: 120px;
+}
+.bg-image img {background-position: center top;
+
 }
 @media (max-width: 765px) {
   .bg-image {
