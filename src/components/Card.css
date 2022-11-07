@@ -1,7 +1,69 @@
-.container-tarjeta {
-    max-width: 250px;
-    width: 270px;
-    min-width: 150px;
-    height: fit-content;
-    margin: 0 auto;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  /* box-shadow: 0px 0px 9px -4px rgb(213, 210, 221); */
+  box-shadow: 0px 0px 9px -2px rgb(15, 15, 15);
+  background-color: rgb(15, 79, 175);
+  display: flex;
+  border-radius: 7px;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.card:hover {
+  box-shadow: 0px 0px 9px -4px rgb(213, 210, 221);
+  transition: all ease 0.3s;
+  transform: scale(1.02);
+}
+.card-title {
+  color: #fff;
+  text-align: start;
+}
+.card-image {
+  height: 180px;
+  width: 100%;
+  border-radius: 7px 7px 0px 0px;
+  background-size: contain;
+}
+/* .card-image:hover {
+  transition: all ease 0.3s;
+  transform: scale(1.02);
+} */
+.card-description {
+  max-height: 42px;
+  overflow: hidden;
+  color: #fff;
+}
+.priceGroup {
+  display: flex;
+  width: fit-content;
+  background-color: green;
+  border-radius: 5px;
+  align-items: center;
+}
+.porcentaje {
+  font-size: 18px;
+  padding: 0px 6px;
+  color: lime;
+  font-weight: bold;
+}
+.prices {
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 20px;
+  font-size: 13px;
+  background-color: rgb(63 63 64);
+}
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+}
+.new-price {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #07f807;
+}

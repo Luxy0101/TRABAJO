@@ -1,14 +1,13 @@
 import React from 'react';
-import Header from './pages/Header';
 import Products from './pages/Products';
+import Slider from './pages/Slider';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div>
+      < Slider />
       <Products />
-      
-    </div>
+    </div >
   );
 }
 

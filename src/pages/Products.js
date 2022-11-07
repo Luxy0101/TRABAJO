@@ -1,17 +1,15 @@
 import React from 'react'
-import Card from '../components/Card';
-import { productosStore } from '../data/productosStore';
+import SectionFree from '../components/SectionFree';
+import SectionOfertas from '../components/SectionOfertas';
+import SectionPaga from '../components/SectionPaga';
 import './Products.css'
 
 const Products = () => {
   return (
-    <div style={{ margin: '40px' }}>
-      <h1 className='titulo'>OFERTAS ESPECIALES</h1>
-      <div className='container-productos'>
-        {productosStore.map((data) => (
-          <Card key={data.id} data={data} />
-        ))}
-      </div>
+    <div style={{ padding: '40px 0px', maxWidth: '80%', margin: '0 auto' }}>
+      <SectionOfertas />
+      <SectionFree />
+      <SectionPaga />
     </div>
   )
 }

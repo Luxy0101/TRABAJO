@@ -1,23 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 const Card = ({ data }) => {
   return (
-    <div className="container-tarjeta">
-      <div style={{ height: '150px', width: '250px', minWidth: '150px', objectFit: 'cover' }}>
-        <img style={{ height: '100%', width: '100%' }} src={data.image} alt="imagen" />
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: 'blue', padding: '15px' }}>
-        <h3 style={{ color: 'black' }}>{data.nombre}</h3>
-        <div style={{ width: 'fit-content', display: 'flex', backgroundColor: 'green', alignItems: 'center' }}>
-          <p style={{ padding: '0px 5px', fontSize: '20px', color: 'greenyellow', fontWeight: 'bold' }}>-{data.porcentaje}%</p>
-          <div style={{ fontSize: '13px', backgroundColor: 'grey', padding: '2px 10px', color: 'greenyellow', display: 'flex', flexDirection: 'column' }}>
-            <p style={{ textDecoration: 'line-through' }}>${data.precio}</p>
-            <p>${data.descuento}</p>
-          </div>
+    <Link to={`/games/${data.id}`}>
+      <div className="card">
+        <img src={data.image} alt={data.nombre} className="card-image" />
+        <div style={{ padding: '15px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <h2 className="card-title">{data.nombre}</h2>
+          {
+            data.oferta ? (
+              <div className="priceGroup">
+                <p className="porcentaje">-{data.porcentaje}%</p>
+                <div className="prices">
+                  <p className="old-price">ARS$ {data.oldPrice}</p>
+                  <p className="new-price">ARS$ {data.newPrice}</p>
+                </div>
+              </div>
+            ) :
+              <p className="card-description">{data.descripcion}</p>
+          }
         </div>
       </div>
-    </div >
+    </Link>
   );
 };
 
